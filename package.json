@@ -1,0 +1,38 @@
+{
+	"name": "adkalendar",
+	"version": "1.0.1",
+	"module": "index.ts",
+	"type": "module",
+	"private": false,
+	"author": {
+		"email": "pro.vincent.briand@pm.me",
+		"name": "VincentBriand44"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/VincentBriand44/AdKalendar"
+	},
+	"license": "UNLICENSED",
+	"description": "Mark as viewed on AdKami from Crunchyroll",
+	"devDependencies": {
+		"@types/bun": "^1.1.10",
+		"esbuild": "0.24.0"
+	},
+	"scripts": {
+		"build": "bun build.ts",
+		"lint": "bunx @biomejs/biome lint --write .",
+		"format": "bunx @biomejs/biome format --write .",
+		"check": "bunx @biomejs/biome check --write ."
+	},
+	"peerDependencies": {
+		"typescript": "^5.6.2"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-emoji"
+		},
+		"cz-emoji": {
+			"skipQuestions": ["scope", "body", "issues", "breaking"]
+		}
+	}
+}
