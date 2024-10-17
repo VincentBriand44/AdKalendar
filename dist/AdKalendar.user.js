@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         AdKalendar
 // @namespace    http://tampermonkey.net/
-// @version      v1.1.0
+// @version      v1.2.0
 // @description  Add new filters for ADKami calendar
 // @author       Kanon
 // @downloadURL  https://raw.githubusercontent.com/VincentBriand44/AdKalendar/refs/heads/main/dist/AdKalendar.user.js
