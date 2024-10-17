@@ -62,10 +62,10 @@
 const clickHandler = () => {
 	const episodes: NodeListOf<HTMLDivElement> =
 		document.querySelectorAll(".episode");
-	
-  const noVf: HTMLInputElement | null = document.querySelector("#novf input");
-  const noSpecial: HTMLInputElement | null =
-    document.querySelector("#nospecial input");
+
+	const noVf: HTMLInputElement | null = document.querySelector("#novf input");
+	const noSpecial: HTMLInputElement | null =
+		document.querySelector("#nospecial input");
 
 	const noPaused: HTMLInputElement | null =
 		document.querySelector("#nopaused input");
@@ -92,7 +92,12 @@ const clickHandler = () => {
 			episode.style.display = noPaused.checked ? "none" : "block";
 			hide = noPaused.checked;
 		}
-		if (episode.classList.contains("vu") && episode.style.border !== "2px solid #f44336" && !episode.hidden && !hide) {
+		if (
+			episode.classList.contains("vu") &&
+			episode.style.border !== "2px solid #f44336" &&
+			!episode.hidden &&
+			!hide
+		) {
 			episode.style.display = noWatched.checked ? "none" : "block";
 		}
 	});
