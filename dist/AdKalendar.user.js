@@ -5,7 +5,8 @@
 // @version      v1.1.0
 // @description  Add new filters for ADKami calendar
 // @author       Kanon
-// @match        https://www.adkami.com/agenda*
+// @downloadURL  https://raw.githubusercontent.com/VincentBriand44/AdKalendar/refs/heads/main/dist/AdKalendar.user.js
+// @match        http*:/*adkami.com/agenda*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=adkami.com
 // @grant        none
 // ==/UserScript==
