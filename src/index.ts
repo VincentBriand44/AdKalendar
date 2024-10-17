@@ -84,7 +84,7 @@ const clickHandler = () => {
 			hide = noVf.checked;
 		}
 		if (!episodeTitle?.textContent?.startsWith("Episode") && !episode.hidden) {
-			episode.style.display = noVf.checked ? "none" : "block";
+			episode.style.display = noSpecial.checked ? "none" : "block";
 			hide = noSpecial.checked;
 		}
 
