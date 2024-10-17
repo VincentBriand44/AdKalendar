@@ -4,7 +4,7 @@ import { version } from "./package.json";
 
 const banner = `
 // ==UserScript==
-// @name         Hide VF episodes
+// @name         AdKalendar
 // @namespace    http://tampermonkey.net/
 // @version      v${version}
 // @description  Add new filters for ADKami calendar
