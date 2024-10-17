@@ -23,7 +23,7 @@ build({
 	minifyWhitespace: true,
 	sourcemap: false,
 	target: "esNext",
-	outfile: `dist/AdKalendar.user.js`,
+	outfile: "dist/AdKalendar.user.js",
 	banner: {
 		js: banner,
 	},
