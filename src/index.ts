@@ -2,6 +2,8 @@
 	const buttonsPos: HTMLDivElement | null =
 		document.querySelector("#pannel-list");
 
+	if (!buttonsPos) return;
+
 	const buttons = [
 		{
 			title: "Cacher 'VF'",
@@ -15,9 +17,11 @@
 			title: "Cacher 'vu'",
 			id: "nowatched",
 		},
+		{
+			title: "Cacher 'oav/spécial'",
+			id: "nospecial",
+		},
 	];
-
-	if (!buttonsPos) return;
 
 	for (const button of buttons) {
 		const str = localStorage.getItem(button.id);
@@ -58,13 +62,17 @@
 const clickHandler = () => {
 	const episodes: NodeListOf<HTMLDivElement> =
 		document.querySelectorAll(".episode");
-	const noVf: HTMLInputElement | null = document.querySelector("#novf input");
+	
+  const noVf: HTMLInputElement | null = document.querySelector("#novf input");
+  const noSpecial: HTMLInputElement | null =
+    document.querySelector("#nospecial input");
+
 	const noPaused: HTMLInputElement | null =
 		document.querySelector("#nopaused input");
 	const noWatched: HTMLInputElement | null =
 		document.querySelector("#nowatched input");
 
-	if (!noVf || !noPaused || !noWatched) return;
+	if (!noVf || !noPaused || !noWatched || !noSpecial) return;
 
 	// biome-ignore lint/complexity/noForEach: <explanation>
 	episodes.forEach((episode) => {
@@ -75,6 +83,11 @@ const clickHandler = () => {
 			episode.style.display = noVf.checked ? "none" : "block";
 			hide = noVf.checked;
 		}
+		if (!episodeTitle?.textContent?.startsWith("Episode") && !episode.hidden) {
+			episode.style.display = noVf.checked ? "none" : "block";
+			hide = noSpecial.checked;
+		}
+
 		if (episode.classList.contains("pause") && !episode.hidden && !hide) {
 			episode.style.display = noPaused.checked ? "none" : "block";
 			hide = noPaused.checked;
