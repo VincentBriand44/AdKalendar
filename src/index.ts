@@ -79,7 +79,7 @@ const clickHandler = () => {
 			episode.style.display = noPaused.checked ? "none" : "block";
 			hide = noPaused.checked;
 		}
-		if (episode.classList.contains("vu") && !episode.hidden && !hide) {
+		if (episode.classList.contains("vu") && episode.style.border !== "2px solid #f44336" && !episode.hidden && !hide) {
 			episode.style.display = noWatched.checked ? "none" : "block";
 		}
 	});
