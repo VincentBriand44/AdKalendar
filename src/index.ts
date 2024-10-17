@@ -94,7 +94,7 @@ const clickHandler = () => {
 		}
 		if (
 			episode.classList.contains("vu") &&
-			episode.style.border !== "2px solid #f44336" &&
+			episodeTitle?.textContent?.startsWith("Episode") &&
 			!episode.hidden &&
 			!hide
 		) {
