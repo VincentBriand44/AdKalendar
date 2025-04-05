@@ -118,3 +118,6 @@ const agenda: HTMLDivElement | null = document.querySelector(".agenda-list");
 if (!agenda) throw new Error(".agenda-list not found");
 
 observer.observe(agenda, config);
+
+// Fix: Execute clickHandler on initial load
+clickHandler();
