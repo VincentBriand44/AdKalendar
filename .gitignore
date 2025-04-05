@@ -174,4 +174,4 @@ out
 .DS_Store
 
 # Build
-dist/
+dist
